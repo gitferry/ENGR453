@@ -1,2 +1,2 @@
-# ENGR453
-Code for undergraduate course ENGR 453 the Internet of Things.
+# ENGR453 Internet of Things
+Code and lab instructions for the undergraduate course ENGR 453, the Internet of Things.
