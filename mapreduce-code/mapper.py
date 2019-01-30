@@ -1,4 +1,5 @@
 import sys
+from io import StringIO
 
 def mapper():
     # read standard input line by line
@@ -14,7 +15,7 @@ def mapper():
         cost = data[4]
         
         # Now print out the data that will be passed to the reducer
-        print "{0} {1}".format(store, cost)
+        print ("{0} {1}".format(store, cost))
         
 test_text = """2013-10-09\t13:22\tToronto\tFood\t99.95\tVisa
 2013-10-09\t13:22\tVancouver\tMusic\t9.50\tMasterCard
@@ -22,9 +23,7 @@ test_text = """2013-10-09\t13:22\tToronto\tFood\t99.95\tVisa
 ^d8x28orz28zoijzu1z1zp1OHH3du3ixwcz114<f
 1\t2\t3"""
 
-# This function allows you to test the mapper with the provided test string
 if __name__ == "__main__":
-	import StringIO
-	sys.stdin = StringIO.StringIO(test_text)
+	sys.stdin = StringIO(test_text)
 	mapper()
 	sys.stdin = sys.__stdin__
