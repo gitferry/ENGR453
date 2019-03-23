@@ -6,9 +6,11 @@
 
 In lab4, we will connect our Pi to the cloud! This one is going to be tough, so take a deep breath and get started.
 
-Basically, we will use a publiser-subscriber pattern to finish this lab.
+Basically, we will use a publisher-subscriber pattern to finish this lab.
 Specifically, we use our Pi as a publisher constantly publishing messages about some sort of topic (e.g. temperature).
-What's more, we register virtual device on AWS IoT and use it as a subscriber to the particular topic.
+What's more, we register a virtual device on AWS IoT and use it as a subscriber to the particular topic.
+
+A little tip is that you can finish part 1 before the lab time and part 2 during the lab time. Of course, you are more than welcome to use your own Pi and finish both the two parts before the lab time.
 
 ## Part 1 Create an AWS IoT Thing for Your Raspberry Pi
 
@@ -100,6 +102,11 @@ The Device Shadow service maintains a shadow for each device that is connected t
     ```
     mkdir demo
     ```
+    If you get a response saying that this directory exists, then you use this command to remove it:
+    
+    ```
+    rm -rf demo
+    ```
     Then create other directories `sdk` and `cert` inside `demo`:
 
     ```
@@ -128,11 +135,11 @@ Use following commands to install Python SDK:
 
 1. Unzip the SDK:
     ```
-    unzip /demo/sdk/aws-iot-device-sdk-python-latest.zip
+    unzip /home/pi/demo/sdk/aws-iot-device-sdk-python-latest.zip
     ```
 2. Install
     ```
-    sudo python /demo/sdk/setup.py install
+    sudo python /home/pi/demo/sdk/setup.py install
     ```
 
 After a while, Python SDK will be installed.
